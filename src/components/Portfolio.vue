@@ -10,7 +10,7 @@
     <div class="md:flex md:flex-wrap md:mt-16 md:justify-center">
       <div class="card mt-10 shadow-xl mx-4 md:w-[340px]" v-for="item in state">
         <figure>
-          <img :src="item.thumb" class="md:h-[220px]" />
+          <img :src="item.thumb" class="md:h-[220px]" alt="" />
         </figure>
         <div class="card-body flex place-items-center">
           <h2 class="card-title text-gray-700 dark:text-white">

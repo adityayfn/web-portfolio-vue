@@ -9,5 +9,6 @@ export default defineConfig({
     outDir: "dist",
     publicPath: "/",
   },
+
   plugins: [vue()],
 })
