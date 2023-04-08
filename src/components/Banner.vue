@@ -30,15 +30,18 @@
 </template>
 <script>
 import { ref } from "vue"
+import CV from "/public/assets/cv.pdf"
 export default {
   setup() {
-    const cvUrl = ref("/public/assets/cv.pdf")
+    const cvUrl = ref(CV)
 
     const downloadCv = () => {
       const link = document.createElement("a")
       link.href = cvUrl.value
       link.download = "cv.pdf"
+      document.body.appendChild(link)
       link.click()
+      document.body.removeChild(link)
     }
 
     return {
