@@ -51,21 +51,21 @@
         >
           <router-link
             :to="{ name: 'Portfolio' }"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4"
+            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             Portfolio
           </router-link>
 
           <router-link
             :to="{ name: 'About' }"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4"
+            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             About
           </router-link>
 
           <router-link
             :to="{ name: 'Contact' }"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4"
+            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             Contact
           </router-link>

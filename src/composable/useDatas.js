@@ -12,8 +12,8 @@ import vueBlog3 from "/public/assets/vueblog3.png"
 
 import store from "/public/assets/thumbStore.png"
 import store1 from "/public/assets/detailBootstore.png"
-import store2 from "/public/assets/detailBootstore.png"
-import store3 from "/public/assets/detailBootstore.png"
+import store2 from "/public/assets/detailBoostore2.png"
+import store3 from "/public/assets/detailBootstore3.png"
 
 export const state = reactive([
   {

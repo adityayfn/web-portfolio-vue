@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white h-auto pt-20 dark:bg-black">
+  <footer class="bg-white h-auto dark:bg-black pt-10">
     <div class="mb-10">
       <h1 class="text-black text-center text-3xl dark:text-white">Follow Me</h1>
     </div>
