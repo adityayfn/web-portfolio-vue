@@ -29,43 +29,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="card mt-10 shadow-md mx-4">
-      <figure>
-        <img src="/public/thumb.jpg" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Ecommerce</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-          similique ullam voluptas autem quod facere soluta tempora molestias
-          expedita debitis.
-        </p>
-        <div class="justify-end card-actions">
-          <button class="btn bg-rose-550 border-none text-white">
-            More info
-          </button>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="card mt-10 shadow-md mx-4">
-      <figure>
-        <img src="/public/thumb.jpg" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Ecommerce</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-          similique ullam voluptas autem quod facere soluta tempora molestias
-          expedita debitis.
-        </p>
-        <div class="justify-end card-actions">
-          <button class="btn bg-rose-550 border-none text-white">
-            More info
-          </button>
-        </div>
-      </div>
-    </div> -->
   </section>
 </template>
 <script>
