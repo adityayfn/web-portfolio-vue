@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-white h-auto dark:bg-black pt-10">
     <div class="mb-10">
-      <h1 class="text-black text-center text-3xl dark:text-white">Follow Me</h1>
+      <h1 class="text-center text-3xl text-rose-550 font-bold">Follow Me</h1>
     </div>
     <div class="social-media flex justify-center gap-4">
       <div

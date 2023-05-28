@@ -1,10 +1,25 @@
 <template>
   <section
-    class="bg-white text-black pt-10 text-3xl dark:bg-black dark:text-white"
+    class="bg-white text-black pt-10 text-3xl dark:bg-black dark:text-white relative"
   >
-    <div v-for="item in details" class="">
+    <div class="absolute top-5 right-5">
+      <button
+        class="btn bg-rose-550 text-white text-md hover:bg-rose-700 border-none"
+        @click="goHome()"
+      >
+        <font-awesome-icon
+          :icon="['fa', 'arrow-left']"
+          class="text-xl pr-3"
+        ></font-awesome-icon>
+        Go Back
+      </button>
+    </div>
+    <div
+      v-for="item in details"
+      class="pt-10 animate__animated animate__fadeIn pb-10"
+    >
       <div class="title mb-10">
-        <h1 class="text-center">{{ item.name }}</h1>
+        <h1 class="text-center text-rose-550 font-bold">{{ item.name }}</h1>
       </div>
       <div class="md:flex md:justify-center md:flex-wrap">
         <div class="img w-[350px] my-2 mx-auto" v-for="img in item.img">
@@ -13,13 +28,13 @@
       </div>
       <div class="md:flex md:px-4">
         <div class="about p-4">
-          <h1 class="md:text-4xl">About</h1>
+          <h1 class="md:text-4xl text-rose-550">About</h1>
           <p class="text-base md:text-xl text-gray-600 dark:text-white">
             {{ item.about }}
           </p>
         </div>
         <div class="tools p-4">
-          <h1 class="md:text-4xl">Tools & Technologies</h1>
+          <h1 class="md:text-4xl text-rose-550">Tools & Technologies</h1>
           <p
             class="text-base md:text-xl md:tracking-wide text-gray-600 dark:text-white"
           >
@@ -33,17 +48,21 @@
 <script>
 import { state } from "../composable/useDatas"
 import { computed } from "vue"
-import { useRoute } from "vue-router"
+import { useRoute, useRouter } from "vue-router"
 export default {
   setup() {
     const route = useRoute()
+    const router = useRouter()
 
     const details = computed(() => {
       return state.filter((data) => data.id == route.params.id)
     })
-
+    const goHome = () => {
+      router.push("/")
+    }
     return {
       details,
+      goHome,
     }
   },
 }

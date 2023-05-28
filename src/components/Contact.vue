@@ -1,21 +1,44 @@
 <template>
   <section
     class="bg-white text-black py-12 px-10 md:flex md:justify-center md:gap-4 md:p-20 dark:bg-black dark:text-white"
+    id="contact"
   >
     <div class="mb-16 md:order-2">
       <div class="mb-6">
-        <h1 class="text-3xl">Contact Details</h1>
+        <h1
+          class="text-3xl text-rose-550 font-bold"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          Contact Details
+        </h1>
       </div>
       <div class="flex flex-col gap-4 text-gray-500 text-xl dark:text-white">
-        <div class="flex gap-2">
+        <div
+          class="flex gap-2"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <font-awesome-icon :icon="['fas', 'location-dot']" />
           <h1>Jl.Terusan Batu Bara Vb no 38, Blimbing, Malang, Jawa Timur</h1>
         </div>
-        <div class="flex gap-2">
+        <div
+          class="flex gap-2"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <font-awesome-icon :icon="['fas', 'envelope']" />
           <h1>adhitya.firstian@gmail.com</h1>
         </div>
-        <div class="flex gap-2">
+        <div
+          class="flex gap-2"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <font-awesome-icon :icon="['fas', 'phone']" />
           <h1>+62 89675601599</h1>
         </div>
@@ -24,11 +47,23 @@
 
     <div class="shadow-md py-6 px-4 md:py-0 md:w-[550px]">
       <div>
-        <h1 class="text-3xl">Contact Form</h1>
+        <h1
+          class="text-3xl text-rose-550 font-bold"
+          data-aos="fade-down"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          Contact Form
+        </h1>
       </div>
       <form @submit.prevent="submitForm">
         <div class="card">
-          <div class="form-control">
+          <div
+            class="form-control"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <label class="label">
               <span class="label-text text-black text-xl dark:text-white"
                 >Full Name</span
@@ -37,11 +72,16 @@
             <input
               type="text"
               placeholder="full name"
-              class="input input-ghost"
+              class="input input-ghost dark:bg-white"
               v-model="fullName"
             />
           </div>
-          <div class="form-control">
+          <div
+            class="form-control"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <label class="label">
               <span class="label-text text-black text-xl dark:text-white"
                 >Email</span
@@ -50,11 +90,16 @@
             <input
               type="text"
               placeholder="email"
-              class="input input-ghost"
+              class="input input-ghost dark:bg-white"
               v-model="email"
             />
           </div>
-          <div class="form-control">
+          <div
+            class="form-control"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <label class="label">
               <span class="label-text text-black text-xl dark:text-white"
                 >Subject</span
@@ -63,18 +108,23 @@
             <input
               type="text"
               placeholder="subject"
-              class="input input-ghost"
+              class="input input-ghost dark:bg-white"
               v-model="subject"
             />
           </div>
-          <div class="form-control">
+          <div
+            class="form-control"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <label class="label">
               <span class="label-text text-black text-xl dark:text-white"
                 >Message</span
               >
             </label>
             <textarea
-              class="textarea h-32 bg-gray-100 dark:bg-black dark:text-white dark:border-2 border-white"
+              class="textarea h-32 bg-gray-100 dark:bg-white dark:text-white dark:border-2 border-white"
               placeholder="message"
               v-model="message"
             ></textarea>
@@ -86,13 +136,21 @@
             :class="alert ? 'alert-success' : 'alert-error'"
             v-if="notif !== null"
           >
-            <div class="flex-1">
+            <div
+              class="flex-1"
+              data-aos="fade-up"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <label>{{ notif }}</label>
             </div>
           </div>
           <button
             class="btn bg-rose-550 border-none text-white hover:bg-rose-600"
             type="submit"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           >
             Submit Form
           </button>

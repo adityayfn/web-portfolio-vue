@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white text-black relative flex flex-wrap pt-6 md:px-8 justify-between md:gap-8 md:flex-nowrap dark:bg-black dark:text-white"
+    class="bg-white text-black flex relative flex-wrap pt-6 md:px-8 justify-between md:gap-8 md:flex-nowrap dark:bg-black dark:text-white"
     :class="showMenu ? 'shadow-xl' : 'shadow-none'"
   >
     <div class="flex place-items-center justify-between gap-2">
@@ -49,26 +49,26 @@
         <ul
           class="p-3 relative gap-5 block md:flex md:place-items-center md:flex-1 md:justify-center"
         >
-          <router-link
-            :to="{ name: 'Portfolio' }"
+          <a
+            @click="portfolio()"
             class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             Portfolio
-          </router-link>
+          </a>
 
-          <router-link
-            :to="{ name: 'About' }"
+          <a
+            @click="about()"
             class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             About
-          </router-link>
+          </a>
 
-          <router-link
-            :to="{ name: 'Contact' }"
+          <a
+            @click="contact()"
             class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
           >
             Contact
-          </router-link>
+          </a>
           <li
             class="btn bg-rose-550 text-white cursor-pointer text-base border-none hover:bg-rose-500"
             @click="hireMe()"
@@ -83,16 +83,15 @@
 
 <script>
 import { ref, onMounted } from "vue"
-import { useRouter } from "vue-router"
 
 export default {
   setup() {
     const showMenu = ref(false)
-    const router = useRouter()
+
     const darkOn = ref(false)
 
     const home = () => {
-      router.push("/")
+      return (window.location.href = "#banner")
     }
 
     const toggle = () => {
@@ -123,6 +122,15 @@ export default {
         document.documentElement.classList.remove("dark")
       }
     })
+    const portfolio = () => {
+      return (window.location.href = "#portfolio")
+    }
+    const about = () => {
+      return (window.location.href = "#about")
+    }
+    const contact = () => {
+      return (window.location.href = "#contact")
+    }
 
     return {
       toggle,
@@ -131,6 +139,9 @@ export default {
       hireMe,
       darkMode,
       darkOn,
+      portfolio,
+      about,
+      contact,
     }
   },
 }
