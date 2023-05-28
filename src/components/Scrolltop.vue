@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative">
     <button
       v-if="showScrollButton"
       @click="scrollToTop"

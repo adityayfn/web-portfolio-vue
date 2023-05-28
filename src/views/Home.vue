@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <Navbar />
-    <Banner />
-    <Portfolio />
-    <About/>
-    <Contact />
-    <Footer />
-  </div>
+  <Navbar />
+  <Banner />
+  <Portfolio />
+  <About />
+  <Contact />
+  <Footer />
 </template>
 <script>
 import Navbar from "../components/Navbar.vue"
