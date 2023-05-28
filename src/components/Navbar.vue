@@ -19,7 +19,7 @@
           Hire Me
         </li> -->
         <li
-          class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black"
+          class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:p-4"
           @click="darkMode()"
         >
           <font-awesome-icon
@@ -70,7 +70,7 @@
             Contact
           </a>
           <li
-            class="btn bg-rose-550 text-white cursor-pointer text-base border-none hover:bg-rose-500"
+            class="btn bg-rose-550 text-white cursor-pointer text-base border-none hover:bg-rose-700"
             @click="hireMe()"
           >
             Hire Me
