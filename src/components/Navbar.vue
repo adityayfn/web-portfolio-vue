@@ -15,11 +15,8 @@
     </div>
     <div class="pt-1 md:order-3">
       <ul class="flex gap-4 ml-8 py-2">
-        <!-- <li class="bg-rose-550 text-black pt-2 rounded p-2 cursor-pointer">
-          Hire Me
-        </li> -->
         <li
-          class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:p-4"
+          class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:bg-rose-550"
           @click="darkMode()"
         >
           <font-awesome-icon
