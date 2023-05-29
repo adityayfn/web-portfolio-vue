@@ -14,6 +14,7 @@
         Go Back
       </button>
     </div>
+
     <div
       v-for="item in details"
       class="pt-10 animate__animated animate__fadeIn pb-10"
@@ -49,6 +50,7 @@
 import { state } from "../composable/useDatas"
 import { computed } from "vue"
 import { useRoute, useRouter } from "vue-router"
+
 export default {
   setup() {
     const route = useRoute()
@@ -57,9 +59,11 @@ export default {
     const details = computed(() => {
       return state.filter((data) => data.id == route.params.id)
     })
+
     const goHome = () => {
       router.push("/")
     }
+
     return {
       details,
       goHome,

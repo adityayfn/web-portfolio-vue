@@ -15,7 +15,7 @@
     </div>
     <div class="pt-1 md:order-3">
       <ul class="flex gap-4 ml-8 py-2">
-        <li
+        <!-- <li
           class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:bg-rose-550"
           @click="darkMode()"
         >
@@ -23,7 +23,8 @@
             :icon="darkOn ? ['fas', 'sun'] : ['fas', 'moon']"
             size="lg"
           />
-        </li>
+        </li> -->
+        <DarkMode />
       </ul>
     </div>
 
@@ -80,12 +81,15 @@
 
 <script>
 import { ref, onMounted } from "vue"
-
+import DarkMode from "./DarkMode.vue"
 export default {
+  components: {
+    DarkMode,
+  },
   setup() {
     const showMenu = ref(false)
 
-    const darkOn = ref(false)
+    // const darkOn = ref(false)
 
     const home = () => {
       return (window.location.href = "#banner")
@@ -98,27 +102,27 @@ export default {
     const hireMe = () => {
       window.open("mailto:adhitya.firstian@gmail.com")
     }
-    const darkMode = () => {
-      darkOn.value = !darkOn.value
+    // const darkMode = () => {
+    //   darkOn.value = !darkOn.value
 
-      if (darkOn.value) {
-        document.documentElement.classList.add("dark")
-        localStorage.setItem("darkOn", "true")
-      } else {
-        document.documentElement.classList.remove("dark")
-        localStorage.setItem("darkOn", "false")
-      }
-    }
-    onMounted(() => {
-      const darkOnStorage = localStorage.getItem("darkOn")
-      if (darkOnStorage == "true") {
-        darkOn.value = true
-        document.documentElement.classList.add("dark")
-      } else {
-        darkOn.value = false
-        document.documentElement.classList.remove("dark")
-      }
-    })
+    //   if (darkOn.value) {
+    //     document.documentElement.classList.add("dark")
+    //     localStorage.setItem("darkOn", "true")
+    //   } else {
+    //     document.documentElement.classList.remove("dark")
+    //     localStorage.setItem("darkOn", "false")
+    //   }
+    // }
+    // onMounted(() => {
+    //   const darkOnStorage = localStorage.getItem("darkOn")
+    //   if (darkOnStorage == "true") {
+    //     darkOn.value = true
+    //     document.documentElement.classList.add("dark")
+    //   } else {
+    //     darkOn.value = false
+    //     document.documentElement.classList.remove("dark")
+    //   }
+    // })
     const portfolio = () => {
       return (window.location.href = "#portfolio")
     }
@@ -134,8 +138,8 @@ export default {
       showMenu,
       home,
       hireMe,
-      darkMode,
-      darkOn,
+      // darkMode,
+      // darkOn,
       portfolio,
       about,
       contact,
