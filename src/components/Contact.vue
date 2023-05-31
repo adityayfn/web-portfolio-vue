@@ -48,7 +48,7 @@
             <input
               type="text"
               placeholder="full name"
-              class="input input-ghost dark:bg-white"
+              class="input input-ghost dark:bg-white dark:text-black"
               v-model="fullName"
             />
           </div>
@@ -61,7 +61,7 @@
             <input
               type="text"
               placeholder="email"
-              class="input input-ghost dark:bg-white"
+              class="input input-ghost dark:bg-white dark:text-black"
               v-model="email"
             />
           </div>
@@ -74,7 +74,7 @@
             <input
               type="text"
               placeholder="subject"
-              class="input input-ghost dark:bg-white"
+              class="input input-ghost dark:bg-white dark:text-black"
               v-model="subject"
             />
           </div>
@@ -85,7 +85,7 @@
               >
             </label>
             <textarea
-              class="textarea h-32 bg-gray-100 dark:bg-white dark:text-white dark:border-2 border-white"
+              class="textarea h-32 bg-gray-100 dark:bg-white dark:text-black dark:border-2 border-white"
               placeholder="message"
               v-model="message"
             ></textarea>
