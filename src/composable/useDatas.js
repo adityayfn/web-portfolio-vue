@@ -25,6 +25,7 @@ export const state = reactive([
     thumb: alquran,
     img: [alquran1, alquran2, alquran3],
     type: "Web Application",
+    demo: "https://simple-alquran-online.netlify.app/",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ export const state = reactive([
     thumb: vueBlog,
     img: [vueBlog1, vueBlog2, vueBlog3],
     type: "Web Application",
+    demo: "https://simple-clean-blog.netlify.app/",
   },
   {
     id: 3,
@@ -45,5 +47,6 @@ export const state = reactive([
     thumb: store,
     img: [store1, store2, store3],
     type: "Web Application",
+    demo: "https://fake-drmartens-store.netlify.app/",
   },
 ])
