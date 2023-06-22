@@ -25,7 +25,7 @@ export const state = reactive([
     thumb: alquran,
     img: [alquran1, alquran2, alquran3],
     type: "Web Application",
-    demo: "https://simple-alquran-online.netlify.app/",
+    demo: "https://alquran-online-v2.netlify.app/",
   },
   {
     id: 2,
