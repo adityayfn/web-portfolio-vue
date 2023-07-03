@@ -21,7 +21,7 @@ export const state = reactive([
     name: "Al-Qur'an Online",
     tools: "HTML,CSS,Javascript,Vue.js,TailwindCSS",
     about:
-      "Ini adalah project pertama saya yang menggunakan Vue Js dengan Vite. Di project ini saya menggunakan API dari https://quranapi.idn.sch.id/ dan menggunakan tailwind css untuk styling.",
+      "Ini adalah project pertama saya yang menggunakan Vue Js dengan Vite. Di project ini saya menggunakan API dari https://quranapi.idn.sch.id/ .",
     thumb: alquran,
     img: [alquran1, alquran2, alquran3],
     type: "Web Application",
@@ -43,7 +43,7 @@ export const state = reactive([
     name: "Dr Martens Store",
     tools: "HTML,CSS,Javascript,Vue.js,Tailwind CSS,Daisy UI,Firebase",
     about:
-      "Fake Dr Martens Store menggunakan Vue JS dengan vite. Pada project ini saya menggunakan firebase database dan styling menggunakan Tailwind CSS dan Daisy UI.",
+      "Fake Dr Martens Store menggunakan Vue JS 3. Pada project ini saya menggunakan firebase database.",
     thumb: store,
     img: [store1, store2, store3],
     type: "Web Application",
