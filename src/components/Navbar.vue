@@ -11,6 +11,9 @@
         <span class="text-4xl">A</span>ditya ;
       </button>
     </div>
+    <div class="absolute right-4 md:hidden">
+      <Dropdown />
+    </div>
     <div class="md:order-3">
       <ul class="relative max-sm:hidden">
         <DarkMode />
@@ -74,9 +77,11 @@
 <script>
 import { ref } from "vue"
 import DarkMode from "./DarkMode.vue"
+import Dropdown from "./Dropdown.vue"
 export default {
   components: {
     DarkMode,
+    Dropdown,
   },
   setup() {
     const showMenu = ref(false)
