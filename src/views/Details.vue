@@ -29,13 +29,13 @@
       </div>
       <div class="px-3 mt-5 flex flex-col gap-7">
         <div>
-          <h1 class="text-green text-2xl font-bold md:text-3xl abril">About</h1>
-          <h2 class="dark:text-gray-200 text-dark md:text-xl eczar">
+          <h1 class="text-green text-3xl font-bold md:text-3xl abril">About</h1>
+          <h2 class="dark:text-gray-200 text-dark text-xl eczar">
             {{ item.about }}
           </h2>
         </div>
         <div>
-          <h1 class="text-green text-2xl font-bold md:text-3xl abril">
+          <h1 class="text-green text-3xl font-bold md:text-3xl abril">
             Tech Stack
           </h1>
           <div class="flex gap-5">
@@ -48,7 +48,7 @@
           <h1 class="text-green text-2xl font-bold md:text-3xl abril">Demo</h1>
           <a
             :href="item.demo"
-            class="dark:text-gray-200 text-dark hover:text-green md:text-xl eczar"
+            class="dark:text-gray-200 text-dark hover:text-green text-xl eczar"
             >{{ item.demo }}</a
           >
         </div>
