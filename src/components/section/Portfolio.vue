@@ -24,7 +24,7 @@
         </figure>
         <div class="card-body flex place-items-center">
           <h2
-            class="card-title dark:text-green text-center text-xl eczar tracking-wider"
+            class="card-title text-dark dark:text-green text-center text-xl eczar tracking-wider"
           >
             {{ item.title }}
           </h2>
@@ -37,22 +37,13 @@
     </div>
   </section>
 </template>
-<script>
+<script setup>
 import { state } from "../../composable/useDatas"
 import { useRouter } from "vue-router"
-export default {
-  setup() {
-    const router = useRouter()
+const router = useRouter()
 
-    const details = (id) => {
-      router.push("/details/" + id)
-    }
-
-    return {
-      state,
-      details,
-    }
-  },
+const details = (id) => {
+  router.push("/details/" + id)
 }
 </script>
 <style></style>

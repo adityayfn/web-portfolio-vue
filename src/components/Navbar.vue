@@ -52,7 +52,7 @@
   <nav class="w-full md:hidden overflow-x-hidden fixed z-20">
     <div class="fixed md:relative w-full bottom-0 left-0 bg-white rounded-xl">
       <div
-        class="dark:bg-dark dark:text-gray-200 w-full py-2 px-3 md:inline-block border-t-2 border-[#12b488] rounded-xl"
+        class="dark:bg-dark text-dark dark:text-gray-200 w-full py-2 px-3 md:inline-block border-t-2 border-[#12b488] rounded-xl"
       >
         <ul
           class="flex items-center gap-2 md:flex-row justify-center eczar my-2"
@@ -74,50 +74,28 @@
   </nav>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue"
 import DarkMode from "./DarkMode.vue"
 import Dropdown from "./Dropdown.vue"
-export default {
-  components: {
-    DarkMode,
-    Dropdown,
-  },
-  setup() {
-    const showMenu = ref(false)
+const showMenu = ref(false)
 
-    const home = () => {
-      return (window.location.href = "#banner")
-    }
+const home = () => {
+  return (window.location.href = "#home")
+}
 
-    const toggle = () => {
-      showMenu.value = !showMenu.value
-    }
+const hireMe = () => {
+  window.open("mailto:adhitya.firstian@gmail.com")
+}
 
-    const hireMe = () => {
-      window.open("mailto:adhitya.firstian@gmail.com")
-    }
-
-    const portfolio = () => {
-      return (window.location.href = "#portfolio")
-    }
-    const about = () => {
-      return (window.location.href = "#about")
-    }
-    const contact = () => {
-      return (window.location.href = "#contact")
-    }
-
-    return {
-      toggle,
-      showMenu,
-      home,
-      hireMe,
-      portfolio,
-      about,
-      contact,
-    }
-  },
+const portfolio = () => {
+  return (window.location.href = "#portfolio")
+}
+const about = () => {
+  return (window.location.href = "#about")
+}
+const contact = () => {
+  return (window.location.href = "#contact")
 }
 </script>
 <style scoped></style>

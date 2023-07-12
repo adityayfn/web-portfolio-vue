@@ -23,37 +23,28 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, onUnmounted } from "vue"
 
-export default {
-  setup() {
-    const showScrollButton = ref(false)
+const showScrollButton = ref(false)
 
-    const handleScroll = () => {
-      showScrollButton.value = window.pageYOffset > 100
-    }
-
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-      })
-    }
-
-    onMounted(() => {
-      window.addEventListener("scroll", handleScroll)
-    })
-
-    onUnmounted(() => {
-      window.removeEventListener("scroll", handleScroll)
-    })
-
-    return {
-      showScrollButton,
-      scrollToTop,
-    }
-  },
+const handleScroll = () => {
+  showScrollButton.value = window.pageYOffset > 100
 }
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+  })
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll)
+})
 </script>
 
 <style></style>

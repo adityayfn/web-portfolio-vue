@@ -56,38 +56,26 @@
     </div>
   </section>
 </template>
-<script>
+<script setup>
 import { state } from "../composable/useDatas"
 import { computed, ref } from "vue"
 import { useRoute, useRouter } from "vue-router"
 
-export default {
-  setup() {
-    const route = useRoute()
-    const router = useRouter()
-    const link = ref()
+const route = useRoute()
+const router = useRouter()
 
-    const details = computed(() => {
-      return state.filter((data) => data.id == route.params.id)
-    })
+const details = computed(() => {
+  return state.filter((data) => data.id == route.params.id)
+})
 
-    const getUrl = computed(() => {
-      for (let url of details.value) {
-        return url.demo
-      }
-    })
+const getUrl = computed(() => {
+  for (let url of details.value) {
+    return url.demo
+  }
+})
 
-    const goHome = () => {
-      router.push("/")
-    }
-
-    return {
-      details,
-      goHome,
-      link,
-      getUrl,
-    }
-  },
+const goHome = () => {
+  router.push("/")
 }
 </script>
 <style></style>

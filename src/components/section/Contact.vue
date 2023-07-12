@@ -117,79 +117,65 @@
     </div>
   </section>
 </template>
-<script>
+<script setup>
 import emailjs from "emailjs-com"
 import { ref, reactive } from "vue"
-export default {
-  setup() {
-    const fullName = ref()
-    const email = ref()
-    const subject = ref()
-    const message = ref()
+const fullName = ref()
+const email = ref()
+const subject = ref()
+const message = ref()
 
-    const EMAILJS_SERVICE_ID = "service_xoaj7ht"
-    const EMAILJS_TEMPLATE_ID = "template_c28vtrl"
-    const EMAILJS_USER_ID = "DJY8uWJ6siUPkHEsM"
+const EMAILJS_SERVICE_ID = "service_xoaj7ht"
+const EMAILJS_TEMPLATE_ID = "template_c28vtrl"
+const EMAILJS_USER_ID = "DJY8uWJ6siUPkHEsM"
 
-    const notif = ref(null)
-    const alert = ref(false)
+const notif = ref(null)
+const alert = ref(false)
 
-    emailjs.init(EMAILJS_USER_ID)
-    const submitForm = () => {
-      const template = reactive({
-        to_name: "Aditya Yudha",
-        from_name: fullName.value,
-        email: email.value,
-        subject: subject.value,
-        message: message.value,
+emailjs.init(EMAILJS_USER_ID)
+const submitForm = () => {
+  const template = reactive({
+    to_name: "Aditya Yudha",
+    from_name: fullName.value,
+    email: email.value,
+    subject: subject.value,
+    message: message.value,
+  })
+
+  console.log(template)
+
+  if (
+    template.from_name &&
+    template.email &&
+    template.subject &&
+    template.message
+  ) {
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, template)
+      .then((res) => {
+        console.log("success", res)
+      })
+      .catch((error) => {
+        console.log("error", error)
       })
 
-      console.log(template)
+    alert.value = true
+    notif.value = "The contact form has been sent successfully"
+    setTimeout(() => {
+      notif.value = null
+    }, 1500)
+  } else {
+    alert.value = true
+    notif.value = "The contact form has failed to send"
+    setTimeout(() => {
+      notif.value = null
+    }, 1500)
+  }
 
-      if (
-        template.from_name &&
-        template.email &&
-        template.subject &&
-        template.message
-      ) {
-        emailjs
-          .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, template)
-          .then((res) => {
-            console.log("success", res)
-          })
-          .catch((error) => {
-            console.log("error", error)
-          })
-
-        alert.value = true
-        notif.value = "The contact form has been sent successfully"
-        setTimeout(() => {
-          notif.value = null
-        }, 1500)
-      } else {
-        alert.value = true
-        notif.value = "The contact form has failed to send"
-        setTimeout(() => {
-          notif.value = null
-        }, 1500)
-      }
-
-      fullName.value = ""
-      email.value = ""
-      subject.value = ""
-      message.value = ""
-    }
-
-    return {
-      fullName,
-      email,
-      subject,
-      message,
-      submitForm,
-      alert,
-      notif,
-    }
-  },
+  fullName.value = ""
+  email.value = ""
+  subject.value = ""
+  message.value = ""
 }
 </script>
 <style></style>

@@ -18,25 +18,25 @@
       data-aos-easing="ease-in-sine"
     >
       <div
-        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md dark:text-gray-200 eczar gap-4"
+        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md text-dark dark:text-gray-200 eczar gap-4"
       >
         <img src="/icons/git.png" alt="" class="w-8" />
         <h1>GIT</h1>
       </div>
       <div
-        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md dark:text-gray-200 eczar gap-4"
+        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md text-dark dark:text-gray-200 eczar gap-4"
       >
         <img src="/icons/github.png" alt="" class="w-8" />
         <h1>GITHUB</h1>
       </div>
       <div
-        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md dark:text-gray-200 eczar gap-4"
+        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md text-dark dark:text-gray-200 eczar gap-4"
       >
         <img src="/icons/npm.png" alt="" class="w-8" />
         <h1>NPM</h1>
       </div>
       <div
-        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md dark:text-gray-200 eczar gap-4"
+        class="flex items-center border-2 w-40 h-16 p-1 border-green-700 rounded-md text-dark dark:text-gray-200 eczar gap-4"
       >
         <img src="/icons/fire.png" alt="" class="w-8" />
         <h1>FIREBASE</h1>

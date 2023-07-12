@@ -43,7 +43,7 @@
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
-          <h1 class="text-xl dark:text-gray-200 md:text-2xl eczar">
+          <h1 class="text-xl text-dark dark:text-gray-200 md:text-2xl eczar">
             I am a motivated and ambitious individual with a background in
             vocational education (SMK). With my virtual internship experience
             and foundational skills in frontend programming, I am passionate
