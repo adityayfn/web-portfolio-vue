@@ -1,78 +1,70 @@
 <template>
   <nav
-    class="bg-white text-black flex relative flex-wrap pt-6 md:px-8 justify-between md:gap-8 md:flex-nowrap dark:bg-black dark:text-white"
+    class="flex relative flex-wrap md:px-8 justify-between md:gap-4 md:flex-nowrap dark:bg-dark items-center"
     :class="showMenu ? 'shadow-xl' : 'shadow-none'"
   >
-    <div class="flex place-items-center justify-between gap-2">
-      <ul class="flex place-items-center">
-        <li class="cursor-pointer" @click="home()">
-          <img src="/public/assets/a.png" alt="" class="w-16" />
-        </li>
-        <li class="cursor-pointer" @click="home()">
-          <h1 class="name text-2xl"><span class="text-3xl">A</span>ditya</h1>
-        </li>
-      </ul>
+    <div class="h-20 items-center flex justify-between px-3">
+      <button
+        class="text-3xl text-green font-bold abril tracking-wider"
+        @click="home"
+      >
+        <span class="text-4xl">A</span>ditya ;
+      </button>
     </div>
-    <div class="pt-1 md:order-3">
-      <ul class="flex gap-4 ml-8 py-2">
-        <!-- <li
-          class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:bg-rose-550"
-          @click="darkMode()"
-        >
-          <font-awesome-icon
-            :icon="darkOn ? ['fas', 'sun'] : ['fas', 'moon']"
-            size="lg"
-          />
-        </li> -->
+    <div class="md:order-3">
+      <ul class="relative max-sm:hidden">
         <DarkMode />
       </ul>
     </div>
 
-    <div class="bars block sm:hidden pt-3 pl-6">
-      <button
-        @click="toggle()"
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none left-0"
+    <div class="max-sm:hidden">
+      <div
+        class="text-dark w-full py-2 px-3 md:inline-block dark:text-slate-200"
       >
-        <font-awesome-icon
-          :icon="showMenu ? ['fas', 'xmark'] : ['fas', 'bars']"
-          size="lg"
-        />
-      </button>
-    </div>
-    <div
-      class="w-full flex-grow sm:flex sm:items-center sm:w-auto"
-      :class="showMenu ? 'block' : 'hidden'"
-    >
-      <div class="flex text-sm sm:flex-grow relative">
         <ul
-          class="p-3 relative gap-5 block md:flex md:place-items-center md:flex-1 md:justify-center"
+          class="flex flex-col gap-4 md:flex-row md:justify-center items-center"
         >
-          <a
-            @click="portfolio()"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
-          >
-            Portfolio
-          </a>
-
-          <a
-            @click="about()"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
-          >
+          <button @click="about" class="text-xl hover:text-green eczar">
             About
-          </a>
+          </button>
+          <button @click="portfolio" class="text-xl hover:text-green eczar">
+            Portfolio
+          </button>
 
-          <a
-            @click="contact()"
-            class="cursor-pointer block sm:inline-block sm:mt-0 text-xl mr-4 hover:text-rose-550"
-          >
+          <button @click="contact" class="text-xl hover:text-green eczar">
             Contact
-          </a>
-          <li
-            class="btn bg-rose-550 text-white cursor-pointer text-base border-none hover:bg-rose-700"
-            @click="hireMe()"
-          >
-            Hire Me
-          </li>
+          </button>
+          <div>
+            <button class="btn m-0" @click="hireMe">Hire Me</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  <nav class="w-full md:hidden overflow-x-hidden fixed z-20">
+    <div class="fixed md:relative w-full bottom-0 left-0 bg-white rounded-xl">
+      <div
+        class="dark:bg-dark dark:text-gray-200 w-full py-2 px-3 md:inline-block border-t-2 border-[#12b488] rounded-xl"
+      >
+        <ul
+          class="flex items-center gap-2 md:flex-row justify-center eczar my-2"
+        >
+          <DarkMode />
+          <button @click="about" class="text-xl hover:text-green">About</button>
+          <button @click="portfolio" class="text-xl hover:text-green">
+            Portfolio
+          </button>
+
+          <button @click="contact" class="text-xl hover:text-green">
+            Contact
+          </button>
+
+          <button class="btn mt-0" @click="hireMe">Hire Me</button>
         </ul>
       </div>
     </div>
@@ -80,7 +72,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue"
+import { ref } from "vue"
 import DarkMode from "./DarkMode.vue"
 export default {
   components: {
@@ -88,8 +80,6 @@ export default {
   },
   setup() {
     const showMenu = ref(false)
-
-    // const darkOn = ref(false)
 
     const home = () => {
       return (window.location.href = "#banner")
@@ -102,27 +92,7 @@ export default {
     const hireMe = () => {
       window.open("mailto:adhitya.firstian@gmail.com")
     }
-    // const darkMode = () => {
-    //   darkOn.value = !darkOn.value
 
-    //   if (darkOn.value) {
-    //     document.documentElement.classList.add("dark")
-    //     localStorage.setItem("darkOn", "true")
-    //   } else {
-    //     document.documentElement.classList.remove("dark")
-    //     localStorage.setItem("darkOn", "false")
-    //   }
-    // }
-    // onMounted(() => {
-    //   const darkOnStorage = localStorage.getItem("darkOn")
-    //   if (darkOnStorage == "true") {
-    //     darkOn.value = true
-    //     document.documentElement.classList.add("dark")
-    //   } else {
-    //     darkOn.value = false
-    //     document.documentElement.classList.remove("dark")
-    //   }
-    // })
     const portfolio = () => {
       return (window.location.href = "#portfolio")
     }
@@ -138,8 +108,6 @@ export default {
       showMenu,
       home,
       hireMe,
-      // darkMode,
-      // darkOn,
       portfolio,
       about,
       contact,

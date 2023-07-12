@@ -1,6 +1,6 @@
 <template>
   <li
-    class="p-2 w-12 rounded text-center bg-slate-100 cursor-pointer dark:text-black hover:bg-rose-550"
+    class="p-2 w-12 rounded text-center bg-green cursor-pointer btn m-0"
     @click="darkMode()"
   >
     <font-awesome-icon

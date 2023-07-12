@@ -1,14 +1,9 @@
 <template>
-  <Scrolltop />
   <router-view></router-view>
 </template>
 <script>
-import Scrolltop from "./components/Scrolltop.vue"
 import { onMounted } from "vue"
 export default {
-  components: {
-    Scrolltop,
-  },
   setup() {
     onMounted(() => {
       const darkOnStorage = localStorage.getItem("darkOn")
@@ -25,4 +20,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Eczar&display=swap");
+
+.abril {
+  font-family: "Abril Fatface", cursive;
+}
+.eczar {
+  font-family: "Eczar", serif;
+}
+</style>
